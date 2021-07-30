@@ -1,0 +1,58 @@
+body {
+    scroll-behavior: smooth;
+}
+
+center {
+    padding: 15px;
+}
+
+.login_div {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+input[type=text],
+[type=email] {
+    border: 2px solid rgb(219, 219, 219);
+    border-radius: 4px;
+    margin: 8px 0;
+    outline: none;
+    padding: 8px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 30px;
+}
+
+#book_btn {
+    height: 40px;
+    width: 60%;
+    border-radius: 30px;
+    color: #ffffff;
+}
+
+#book_btn:hover {
+    background-color: rgb(255, 255, 255);
+    color: gold;
+}
+
+.social-icons {
+    padding: 5px;
+}
+
+.social-icons svg {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin: 2px;
+}
+
+.for_see {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+#mail {
+    cursor: pointer;
+}
