@@ -22,6 +22,7 @@
             background-color: white;
             border-radius: 10px;
             padding: 10px;
+            width: 100%;
         }
         
         .welcome-img {
@@ -29,16 +30,22 @@
             height: 300px;
             border-radius: 5px;
         }
+        
+        iframe {
+            border-radius: 5px;
+        }
     </style>
     <center>
         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-11 mt-5 sub">
             <div class="form-group">
                 <div class="text-success">
-                    <span style="font-size: 25px;"><b>Successfully Booked</b></span>
+                    <span style="font-size: 25px;"><b>YouTube Stream</b></span>
                     <br>
-                    <span style="font-size: 18px;" class="text-primary">Event is start on 2 August</span>
+                    <span style="font-size: 18px;" class="text-primary">Event is start on 2 August in 1:00pm IST, 5:30+GMT</span>
                     <br>
-                    <img src="https://source.unsplash.com/random" alt="Random Images" class="welcome-img">
+                    <!-- <img src="https://source.unsplash.com/random" alt="Random Images" class="welcome-img"> -->
+                    <iframe class="col-lg-4 col-md-6 col-sm-6 col-xs-11" width="560" height="315" src="https://www.youtube.com/embed/PMuKC61-oCY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
                     <br>
                     <p class="text-muted" id="name"></p>
                     <p style="margin-top: -20px;" class="text-muted" id="email"></p>
@@ -47,8 +54,9 @@
             <div class="text-primary">Meeting is held in Zoom conferrence and YouTube Livestream.</div>
         </div>
         <button class="btn btn-primary mt-2" onclick="zoom_meeting();">Zoom Meeting</button>
+        <button class="btn btn-danger mt-2" onclick="youtube_link();">YouTube Stream</button>
 
-        <div class="text-success mt-3">Enjoy our random images</div>
+        <div class="text-success mt-3">Thanks! for joining us <span id="part"></span></div>
     </center>
 
     <script>
@@ -57,9 +65,18 @@
 
         document.getElementById("name").innerHTML = 'Name: ' + user;
         document.getElementById("email").innerHTML = 'Email: ' + email;
+        document.getElementById("part").innerHTML = user;
 
         function zoom_meeting() {
-            window.open("https://us05web.zoom.us/j/3310594892?pwd=N0trZ0g0SDdzaUJBUk44b1dieXZ4QT09");
+            window.open(
+                "https://us05web.zoom.us/j/3310594892?pwd=N0trZ0g0SDdzaUJBUk44b1dieXZ4QT09"
+            );
+        }
+
+        function youtube_link() {
+            window.open(
+                "https://youtu.be/PMuKC61-oCY"
+            );
         }
     </script>
 </body>
